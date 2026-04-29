@@ -58,3 +58,76 @@
 numpy
 matplotlib
 meep
+
+## Запуск
+
+### 1. Установка Meep
+
+Проект использует библиотеку Meep для электродинамического моделирования. Рекомендуемый способ установки — через **Conda** (поддерживается на Linux, macOS и Windows WSL) .
+
+#### 1.1 Установка Conda (если ещё не установлен)
+
+Скачайте и установите Miniconda с [официального сайта](https://docs.conda.io/en/latest/miniconda.html).
+
+#### 1.2 Создание окружения и установка Meep
+
+```bash
+# Создание окружения с Python 3.11
+conda create -n meep_env python=3.11
+
+# Активация окружения
+conda activate meep_env
+
+# Установка Meep
+conda install -c conda-forge pymeep pymeep-extras
+```
+
+**Для пользователей macOS на Apple Silicon (M1/M2/M3/M4):**
+```bash
+CONDA_SUBDIR=osx-arm64 conda create -n meep_env -c conda-forge pymeep pymeep-extras python=3.11
+conda activate meep_env
+```
+
+**Для пользователей Ubuntu (через системный пакетный менеджер):**
+
+Альтернативный способ — установка из официальных репозиториев Ubuntu :
+```bash
+sudo apt-get install python3-meep h5utils
+```
+
+### 2. Установка дополнительных зависимостей
+
+```bash
+pip install numpy matplotlib
+```
+
+### 3. Проверка установки
+
+```python
+python -c "import meep as mp; print(mp.__version__)"
+```
+
+При успешной установке вы увидите версию Meep (например, `1.29.0`).
+
+### 4. Запуск скрипта
+
+```bash
+python test_2.py
+```
+
+### 5. Возможные проблемы
+
+| Проблема | Решение |
+|----------|---------|
+| `ModuleNotFoundError: No module named 'meep'` | Активируйте окружение: `conda activate meep_env` |
+| Ошибка с версией Python | Meep требует Python 3.11 . Проверьте: `python --version` |
+| Conda не может решить зависимости | Установите явно: `conda install -c conda-forge pymeep pymeep-extras python=3.11` |
+
+### 6. Структура проекта
+
+```
+MEEP/
+├── test_2.py              # основной скрипт для расчёта
+├── README.md              # этот файл
+└── result.png               # рассчетный график
+```
