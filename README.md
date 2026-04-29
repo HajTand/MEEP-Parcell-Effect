@@ -136,7 +136,7 @@ MEEP/
 
 ## Авторы
 
-#Студент(ы) Волков Никита, Набиуллин Рустем, Зеленин Алексей группы 06-245, Казанский Федеральный Университет, Институт Физики
+# Студент(ы) Волков Никита, Набиуллин Рустем, Зеленин Алексей группы 06-245, Казанский Федеральный Университет, Институт Физики
 
-<img width="900" height="900" alt="Kazan_federal_university_emblem" src="https://github.com/user-attachments/assets/e9588855-2565-491f-aea5-01ff767f00b5" />
+<img width="500" height="500" alt="Kazan_federal_university_emblem" src="https://github.com/user-attachments/assets/e9588855-2565-491f-aea5-01ff767f00b5" />
 
