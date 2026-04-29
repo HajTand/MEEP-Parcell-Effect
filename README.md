@@ -58,6 +58,7 @@
 numpy
 matplotlib
 meep
+```
 
 ## Запуск
 
